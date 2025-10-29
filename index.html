@@ -1,0 +1,34 @@
+<script>
+!function(e){
+  var l=function(l){return e.cookie.match(new RegExp("(?:^|; )digiseller-"+l+"=([^;]*)"))},
+      i=l("lang"),
+      s=l("cart_uid"),
+      t=i?"&lang="+i[1]:"",
+      d=s?"&cart_uid="+s[1]:"",
+      r=e.getElementsByTagName("head")[0]||e.documentElement,
+      n=e.createElement("link"),
+      a=e.createElement("script");
+
+  n.type="text/css";
+  n.rel="stylesheet";
+  n.id="digiseller-css";
+  n.href="https://shop.digiseller.ru/xml/store2_css.asp?seller_id=136369"; // ← HTTPS
+
+  a.async=!0;
+  a.id="digiseller-js";
+  a.src="https://www.digiseller.ru/store2/digiseller-api.js.asp?seller_id=136369"+t+d; // ← HTTPS
+
+  if (!e.getElementById(n.id)) r.appendChild(n);
+  if (!e.getElementById(a.id)) r.appendChild(a);
+}(document);
+</script>
+
+<div style="display: inline-block;" class="digiseller-buy-standalone" 
+     data-id="3531526" 
+     data-ai="136369" 
+     data-img="1" 
+     data-img-size="180" 
+     data-name="1" 
+     data-price="1" 
+     data-no-price="0">
+</div>
